@@ -1,6 +1,10 @@
 # 💾 Born2beRoot - Guia de Avaliação
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
+<details>
+  <summary>Table of Contents</summary>
+ - [Checklist de Avaliação](#-checklist)
+</details>
 
 ## 📋 Checklist de Avaliação
 - [ ] a root deve conter apenas o signature.txt
@@ -17,12 +21,13 @@ sashum {name}.vdi
 >
 > Realize a avaliação no CLONE.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 😶‍🌫️ Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
-- com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
-- startar o CLONE da VM
-- no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
+<details>
+  <summary>😶‍🌫️ Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal</summary>
+  <p>
+   - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
+   - startar o CLONE da VM
+   - no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
 ```
 hostname -I
 ```
@@ -31,7 +36,10 @@ hostname -I
 ```
 ssh {user}@{IPhostname} -p 4242
 ```
+  </p>
+</details>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🖥️ Como funciona a VM?
  o VirtualBox é um hypervisor ou monitor de máquina virtual (VMM), ou seja, um software que cria e executa máquinas virtuais. A virtualização, habilitada pelos hypervisores, transforma a maneira como os recursos de TI são utilizados. São mais baratos que um novo hardware, economiza espaço fisico, simplifica o backup, uma VM nao impacta a outra, o particionamento e isolamento de serviços entre os servidores é seguro contra alguns tipos de virus como malware.
@@ -39,8 +47,10 @@ ssh {user}@{IPhostname} -p 4242
 
 ### 💿 A diferenca entre os sistemas operacionais Debian e Rocky
  Como eu sou iniciante escolhi o Debian, por ser mais popular e user-friendly, possui mais documentação e possui controles de acesso mais faceis de se configurar, o gerenciamento de pacotes é feito pelo apt que por ter uma comunidade maior possui extensa documentacao e foruns para suporte.
+ 
  Já o RockyOS replica as funcionalidades do RHEL(Red Hat Enterprise Linux), como politicas de segurança e gerenciamento de pacotes(yum e dnf) a longo termo, se o objetivo for migrar para RHEL utilizar o RockyOS faz mais sentido, ou também se voce quiser se familiarizar com o ambiente empresarial Red Hat para se destacar em empresas que usam ele, pois os comandos, gerenciamento e configuração são os mesmos fora que é um OS open-source e gratuito.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 📦 Diferenca entre aptitude e apt
  apt:
@@ -58,6 +68,7 @@ ssh {user}@{IPhostname} -p 4242
 ### 🔐 O que é APPArmor
  É um modulo de segurança para controlar e restringir o que aplicativos podem fazer em um sistema Linux.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Avaliação da VM
 
@@ -99,6 +110,7 @@ getent group sudo
 getent group user42
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🔐 Quais as vantagens das politicas de senha, as vantagens e desvantagens da sua implementacao
 
@@ -157,6 +169,7 @@ sudo reboot
 
 - [ ]  voltar o hostname antigo, siga os passos acima
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🗄️ LVM
 Logical Volume Manager é uma ferramenta para gerenciar armazenamento em sistemas Linux.
@@ -223,6 +236,7 @@ sudo nano helloworld
 cat var/log/sudo/sudo.log
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🔥 UFW
 o Uncomplicated Firewall permite a configuração do tráfego baseado em porta, protocolo ou endereço IP com comandos simples.
@@ -250,6 +264,7 @@ sudo ufw delete {num_rule}
 sudo ufw status numbered
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🥨 SSH
 Protocolo de rede que permite a execução de comandos remotamente e transferência de arquivos com criptografia.
@@ -270,6 +285,7 @@ hostname -I
 ssh {newuser}@{localhost} -p 4242
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 📆 cron
 Um serviço do sistema Unix/Linux para agendar e automatizar a execução de tarefas e scripts em horários ou intervalos específicos.
@@ -299,6 +315,8 @@ sudo crontab -u root -e
 ```
 sudo /etc/init.d/cron start
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 > [!NOTE]
 > ⭐️ Se este projeto te ajudou, não esqueça de dar uma estrela!
