@@ -79,7 +79,7 @@ ssh {user}@{IPhostname} -p 4242
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Avaliação da VM
+## ✅ Avaliação da VM
 
 - [ ] script deve mostrar informações a cada 10 minutos;
 
