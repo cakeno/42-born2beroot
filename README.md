@@ -1,4 +1,4 @@
-<h1 align="center">
+ <h1 align="center">
  💾 Born2beRoot - Guia de Avaliação
 </h1>
 
@@ -6,19 +6,20 @@
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
 ## Table of Contents
- - [Checklist de Avaliação](#-checklist-de-avaliação)
- - [Como funciona a VM?](#%EF%B8%8F-como-funciona-a-vm)
- - [Debian e Rocky](#-diferenca-entre-os-sistemas-operacionais-debian-e-rocky)
- - [Diferenca entre aptitude e apt](#-diferenca-entre-aptitude-e-apt)
- - [O que é APPArmor](#-o-que-é-apparmor)
+ - [Start da Avaliação](#-start-da-avaliação)
+   - [Copiar comandos para VM](#%EF%B8%8F-passo-extra)
+   - [Como funciona a VM?](#%EF%B8%8F-como-funciona-a-vm)
+   - [Debian e Rocky](#-diferenca-entre-os-sistemas-operacionais-debian-e-rocky)
+   - [Diferenca entre aptitude e apt](#-diferenca-entre-aptitude-e-apt)
+   - [O que é APPArmor](#-o-que-é-apparmor)
  - [Avaliação da VM](#avaliação-da-vm)
- - [Politicas de senha](#-quais-as-vantagens-das-politicas-de-senha-as-vantagens-e-desvantagens-da-sua-implementacao)
- - [LVM](#%EF%B8%8F-lvm)
- - [UFW](#-ufw)
- - [SSH](#-ssh)
- - [cron](#-cron)
+   - [Politicas de senha](#-quais-as-vantagens-das-politicas-de-senha-as-vantagens-e-desvantagens-da-sua-implementacao)
+   - [LVM](#%EF%B8%8F-lvm)
+   - [UFW](#-ufw)
+   - [SSH](#-ssh)
+   - [cron](#-cron)
 
-## 📋 Checklist de Avaliação
+## 📋 Start da Avaliação
 - [ ] a root deve conter apenas o signature.txt
 - [ ] verificar se a signature.txt é identica ao .vdi
 - entre no diretorio que foi criada sua VM, lá deve conter o arquivo .vdi da sua VM original
