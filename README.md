@@ -2,8 +2,8 @@
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
 ## 📋 Checklist de Avaliação
-[ ] a root deve conter apenas o signature.txt
-[ ] verificar se a signature.txt é identica ao .vdi
+- [] a root deve conter apenas o signature.txt
+- [] verificar se a signature.txt é identica ao .vdi
 - entre no diretorio que foi criada sua VM, lá deve conter o arquivo .vdi da sua VM original
 - gere uma assinatura hash da maquina original, com o comando abaixo, ela deve ser identica a signature.txt
 ```
@@ -49,17 +49,17 @@ ssh {user}@{IPhostname} -p 4242
 
 ## Avaliação da VM
 
-[ ] script deve mostrar informações a cada 10 minutos;
+- [] script deve mostrar informações a cada 10 minutos;
 
-[ ] a maquina nao deve exibir um ambiente grafico
+- [] a maquina nao deve exibir um ambiente grafico
 ```
 ls /usr/bin/*session
 ```
 
-[ ] deve pedir uma senha
-[ ] nao pode ser o usuario root
+- [] deve pedir uma senha
+- [] nao pode ser o usuario root
 
-[ ] UFW service deve estar on
+- [] UFW service deve estar on
 ```
 tail -f /var/log/cron.log
 ```
@@ -71,17 +71,17 @@ ou
 ```
 sudo service ufw status
 ```
-[ ] ssh service deve estar on
+- [] ssh service deve estar on
 ```
 sudo systemctl status ssh
 ```
 
-[ ] verifique o sistema operacional de acordo com o que foi explicado no inicio
+- [] verifique o sistema operacional de acordo com o que foi explicado no inicio
 ```
 uname -v o uname --kernel-version
 ```
 
-[ ] verificar se o userpadrao42 esta cadastrado como "sudo" e "user42"
+- [] verificar se o userpadrao42 esta cadastrado como "sudo" e "user42"
 ```
 getent group sudo
 getent group user42
@@ -113,24 +113,24 @@ Regras:
 - enforce_for_root ➤ Iremos implementar esta política para o utilizador de raiz.
 
 
-[ ] criar um usuario novo, a senha seguindo as regras e um grupo evaluating, coloque o newuser nesse grupo
+- [] criar um usuario novo, a senha seguindo as regras e um grupo evaluating, coloque o newuser nesse grupo
 ```
 sudo adduser {newuser}
 sudo addgroup evaluating
 sudo adduser {newuser} evaluating
 ```
 
-[ ]  verificar se o newuser esta no grupo
+- []  verificar se o newuser esta no grupo
 ```
 getent group evaluating
 ```
 
-[ ]  verificar se o hostname esta user42
+- []  verificar se o hostname esta user42
 ```
 hostname
 ```
 
-[ ]  modifique o hostname e restarte, o hostname deve atualizar
+- []  modifique o hostname e restarte, o hostname deve atualizar
 ```
 sudo nano /etc/hostname
 ```
@@ -141,7 +141,7 @@ sudo nano /etc/hosts
 sudo reboot
 ```
 
-[ ]  voltar o hostname antigo, siga os passos acima
+- []  voltar o hostname antigo, siga os passos acima
 
 ### LVM
 Logical Volume Manager é uma ferramenta para gerenciar armazenamento em sistemas Linux.
@@ -149,12 +149,12 @@ Logical Volume Manager é uma ferramenta para gerenciar armazenamento em sistema
   - VGs - cnoba42-vg: volume group, contem varios LVs;
   - LVs - cnoba42--vg-root: volume logico utilizado para criar sistemas de arquivos;
 
-[ ] verificar as partições com do subject
+- [] verificar as partições com do subject
 ```
 lsblk
 ```
 
-[ ] verificar instalação do sudo
+- [] verificar instalação do sudo
 ```
 sudo --version
 ```
@@ -167,7 +167,7 @@ ou
 which sudo
 ```
 
-[ ] colocar newuser no grupo sudo
+- [] colocar newuser no grupo sudo
 ```
 usermod -aG sudo {newuser}
 ```
@@ -176,12 +176,12 @@ ou
 sudo adduser {newuser} sudo
 ```
 
-[ ] verificar se newuser esta no grupo sudo
+- [] verificar se newuser esta no grupo sudo
 ```
 getent group sudo
 ```
 
-[ ] explicar os valores e operação do sudo e mostrar como implementou as regras de sudo do subject
+- [] explicar os valores e operação do sudo e mostrar como implementou as regras de sudo do subject
 ```
 sudo nano /etc/sudoers
 ```
@@ -197,12 +197,12 @@ Defaults        log_input, log_output //input e output serão salvos
 Defaults        requiretty // ativa TTY
 ```
 
-[ ] verificar se var/log/sudo existe e tem um arquivo dentro com os logs
+- [] verificar se var/log/sudo existe e tem um arquivo dentro com os logs
 ```
 cat var/log/sudo/sudo.log
 ```
 
-[ ] execute um comando sudo para validar o log
+- [] execute um comando sudo para validar o log
 ```
 sudo nano helloworld
 cat var/log/sudo/sudo.log
@@ -212,24 +212,24 @@ cat var/log/sudo/sudo.log
 o Uncomplicated Firewall permite a configuração do tráfego baseado em porta, protocolo ou endereço IP com comandos simples.
 
 
-[ ] UFW instalado e funcionando
+- [] UFW instalado e funcionando
 ```
 dpkg -s ufw
 sudo service ufw status
 ```
 
-[ ] mostrar as regras de UFW, incluindo a da 4242
+- [] mostrar as regras de UFW, incluindo a da 4242
 ```
 sudo ufw status numbered
 ```
 
-[ ] criar uma nova regra e verificar
+- [] criar uma nova regra e verificar
 ```
 sudo ufw allow 8080
 sudo ufw status numbered
 ```
 
-[ ] deletar e verificar
+- [] deletar e verificar
 ```
 sudo ufw delete {num_rule}
 sudo ufw status numbered
@@ -238,14 +238,14 @@ sudo ufw status numbered
 ### SSH
 Protocolo de rede que permite a execução de comandos remotamente e transferência de arquivos com criptografia.
 
-[ ] SSH instalado e funcionando
-[ ] verificar se usa somente a porta 4242
+- [] SSH instalado e funcionando
+- [] verificar se usa somente a porta 4242
 ```
 which ssh
 sudo service ssh status
 ```
 
-[ ] usar o usuario novo para logar usando ssh
+- [] usar o usuario novo para logar usando ssh
 ```
 hostname -I
 ```
@@ -257,28 +257,28 @@ ssh {newuser}@{localhost} -p 4242
 ### cron
 Um serviço do sistema Unix/Linux para agendar e automatizar a execução de tarefas e scripts em horários ou intervalos específicos.
 
-[ ] explicar o script, cron, alterar para 1min, testar os valores dinamicos
+- [] explicar o script, cron, alterar para 1min, testar os valores dinamicos
 ```
 sudo crontab -u root -e
 ```
 
-[ ] verificar se  cron esta ativo
+- [] verificar se  cron esta ativo
 ```
 sudo systemctl status cron
 ```
 
-[ ] fazer o script parar de rodar na inicialização da maquina e restartar
+- [] fazer o script parar de rodar na inicialização da maquina e restartar
 ```
 sudo systemctl disable cron
 sudo reboot
 ```
 
-[ ] verificar o script, rights e se nao houve alterações
+- [] verificar o script, rights e se nao houve alterações
 ```
 sudo crontab -u root -e
 ```
 
-[ ] inicializar o cron novamente
+- [] inicializar o cron novamente
 ```
 sudo /etc/init.d/cron start
 ```
