@@ -9,12 +9,12 @@ Guia passo a passo para a avaliação do projeto Born2beRoot.
 ```
 sashum {name}.vdi
 ```
-
-- antes de startar a VM, duplicar a vm para não alterar a assinatura da maquina e impossibilitar as próximas avaliações.
+> [!WARNING]
+> NÃO DÊ START NA VM ainda, CLONE PRIMEIRO a VM para não alterar a assinatura da maquina e impossibilitar as próximas avaliações, realize a avaliação no CLONE.
 
 ### Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
 - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
-- startar a VM
+- startar o CLONE da VM
 - no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
 ```
 hostname -I
@@ -282,3 +282,6 @@ sudo crontab -u root -e
 ```
 sudo /etc/init.d/cron start
 ```
+
+> [!NOTE]
+> ⭐️ Se este projeto te ajudou, não esqueça de dar uma estrela!
