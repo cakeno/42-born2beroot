@@ -10,7 +10,9 @@ Guia passo a passo para a avaliação do projeto Born2beRoot.
 sashum {name}.vdi
 ```
 > [!WARNING]
-> NÃO DÊ START NA VM ainda, CLONE PRIMEIRO a VM para não alterar a assinatura da maquina e impossibilitar as próximas avaliações, realize a avaliação no CLONE.
+> NÃO DÊ START NA VM ainda
+> CLONE PRIMEIRO a VM para não alterar a assinatura da maquina e impossibilitar as próximas avaliações
+> Realize a avaliação no CLONE.
 
 ### Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
 - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
