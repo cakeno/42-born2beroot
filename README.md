@@ -1,4 +1,4 @@
-# Born2beRoot - Guia de Avaliação
+# 💾 Born2beRoot - Guia de Avaliação
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
 ## 📋 Checklist de Avaliação
@@ -12,11 +12,11 @@ sashum {name}.vdi
 > [!WARNING]
 > NÃO DÊ START NA VM ainda
 >
-> CLONE PRIMEIRO a VM para não alterar a assinatura da maquina e impossibilitar as próximas avaliações
+> CLONE PRIMEIRO a VM para não alterar a assinatura da VM original e impossibilitar as próximas avaliações
 >
 > Realize a avaliação no CLONE.
 
-### Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
+### 😶‍🌫️ Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
 - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
 - startar o CLONE da VM
 - no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
@@ -29,14 +29,14 @@ hostname -I
 ssh {user}@{IPhostname} -p 4242
 ```
 
-### Como funciona a vm?
+### 🖥️ Como funciona a VM?
  o VirtualBox é um hypervisor ou monitor de máquina virtual (VMM), ou seja, um software que cria e executa máquinas virtuais. A virtualização, habilitada pelos hypervisores, transforma a maneira como os recursos de TI são utilizados. São mais baratos que um novo hardware, economiza espaço fisico, simplifica o backup, uma VM nao impacta a outra, o particionamento e isolamento de serviços entre os servidores é seguro contra alguns tipos de virus como malware.
 
-### A diferenca entre os sistemas operacionais Debian e Rocky
+### 💿 A diferenca entre os sistemas operacionais Debian e Rocky
  Como eu sou iniciante escolhi o Debian, por ser mais popular e user-friendly, possui mais documentação e possui controles de acesso mais faceis de se configurar, o gerenciamento de pacotes é feito pelo apt que por ter uma comunidade maior possui extensa documentacao e foruns para suporte.
  Já o RockyOS replica as funcionalidades do RHEL(Red Hat Enterprise Linux), como politicas de segurança e gerenciamento de pacotes(yum e dnf) a longo termo, se o objetivo for migrar para RHEL utilizar o RockyOS faz mais sentido, ou também se voce quiser se familiarizar com o ambiente empresarial Red Hat para se destacar em empresas que usam ele, pois os comandos, gerenciamento e configuração são os mesmos fora que é um OS open-source e gratuito.
 
-### Diferenca entre aptitude e apt
+### 📦 Diferenca entre aptitude e apt
  apt:
  - usa o formato de pacote DEB e resolve dependências automaticamente.
  - combina as funcionalidades de várias ferramentas em um único comando mais simples e fácil de usar.
@@ -48,7 +48,7 @@ ssh {user}@{IPhostname} -p 4242
  - sistema de resolução de dependências mais sofisticado
  - log detalhado
 
-### O que é APPArmor
+### 🔐 O que é APPArmor
  É um modulo de segurança para controlar e restringir o que aplicativos podem fazer em um sistema Linux.
 
 ## Avaliação da VM
@@ -91,7 +91,7 @@ getent group sudo
 getent group user42
 ```
 
-### Quais as vantagens das politicas de senha, as vantagens e desvantagens da sua implementacao
+### 🔐 Quais as vantagens das politicas de senha, as vantagens e desvantagens da sua implementacao
 
 - verificar as regras de senha
 ```
@@ -212,7 +212,7 @@ sudo nano helloworld
 cat var/log/sudo/sudo.log
 ```
 
-### UFW
+### 🔥 UFW
 o Uncomplicated Firewall permite a configuração do tráfego baseado em porta, protocolo ou endereço IP com comandos simples.
 
 
@@ -239,7 +239,7 @@ sudo ufw delete {num_rule}
 sudo ufw status numbered
 ```
 
-### SSH
+### 🥨 SSH
 Protocolo de rede que permite a execução de comandos remotamente e transferência de arquivos com criptografia.
 
 - [ ] SSH instalado e funcionando
@@ -258,7 +258,7 @@ hostname -I
 ssh {newuser}@{localhost} -p 4242
 ```
 
-### cron
+### 📆 cron
 Um serviço do sistema Unix/Linux para agendar e automatizar a execução de tarefas e scripts em horários ou intervalos específicos.
 
 - [ ] explicar o script, cron, alterar para 1min, testar os valores dinamicos
