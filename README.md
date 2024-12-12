@@ -19,21 +19,23 @@ sashum {name}.vdi
 >
 > Realize a avaliação no CLONE.
 
-
+### 😶‍🌫️ Passo extra
 <details>
-  <summary>😶‍🌫️ Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal</summary>
-  <p>
-   - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
-   - startar o CLONE da VM
-   - no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
-  </p>
-  ```
-  hostname -I
-  ```
-  - no terminal local
-  ```
-  ssh {user}@{IPhostname} -p 4242
-  ```
+  <summary>copiar/colar comandos no terminal da VM</summary>
+  <ul>
+   <li>com a VM desligada, mudar para modo "bridge" em configurações > network ou rede</li>
+   <li>startar o CLONE da VM</li>
+   <li>no terminal da VM para saber o IP que sera usado no comando de ssh.</li>
+   <li>OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.</li>
+  </ul>
+
+```
+hostname -I
+```
+- no terminal local
+```
+ssh {user}@{IPhostname} -p 4242
+```
 </details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
