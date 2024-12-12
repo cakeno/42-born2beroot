@@ -3,6 +3,16 @@ Guia passo a passo para a avaliação do projeto Born2beRoot.
 
 ## Table of Contents
  - [Checklist de Avaliação](#-checklist-de-avaliação)
+ - [Como funciona a VM?](#%EF%B8%8F-como-funciona-a-vm)
+ - [Debian e Rocky](#-diferenca-entre-os-sistemas-operacionais-debian-e-rocky)
+ - [Diferenca entre aptitude e apt](#-diferenca-entre-aptitude-e-apt)
+ - [O que é APPArmor](#-o-que-é-apparmor)
+ - [Avaliação da VM](#avaliação-da-vm)
+ - [Politicas de senha](#-quais-as-vantagens-das-politicas-de-senha-as-vantagens-e-desvantagens-da-sua-implementacao)
+ - [LVM](#%EF%B8%8F-lvm)
+ - [UFW](#-ufw)
+ - [SSH](#-ssh)
+ - [cron](#-cron)
 
 ## 📋 Checklist de Avaliação
 - [ ] a root deve conter apenas o signature.txt
@@ -44,7 +54,7 @@ ssh {user}@{IPhostname} -p 4242
  o VirtualBox é um hypervisor ou monitor de máquina virtual (VMM), ou seja, um software que cria e executa máquinas virtuais. A virtualização, habilitada pelos hypervisores, transforma a maneira como os recursos de TI são utilizados. São mais baratos que um novo hardware, economiza espaço fisico, simplifica o backup, uma VM nao impacta a outra, o particionamento e isolamento de serviços entre os servidores é seguro contra alguns tipos de virus como malware.
 
 
-### 💿 A diferenca entre os sistemas operacionais Debian e Rocky
+### 💿 Diferenca entre os sistemas operacionais Debian e Rocky
  Como eu sou iniciante escolhi o Debian, por ser mais popular e user-friendly, possui mais documentação e possui controles de acesso mais faceis de se configurar, o gerenciamento de pacotes é feito pelo apt que por ter uma comunidade maior possui extensa documentacao e foruns para suporte.
  
  Já o RockyOS replica as funcionalidades do RHEL(Red Hat Enterprise Linux), como politicas de segurança e gerenciamento de pacotes(yum e dnf) a longo termo, se o objetivo for migrar para RHEL utilizar o RockyOS faz mais sentido, ou também se voce quiser se familiarizar com o ambiente empresarial Red Hat para se destacar em empresas que usam ele, pois os comandos, gerenciamento e configuração são os mesmos fora que é um OS open-source e gratuito.
