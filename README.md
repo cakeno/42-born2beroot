@@ -137,15 +137,25 @@ sudo vim /etc/pam.d/common-password
 ```
 
 
-Regras:
-- minlen=10 ➤ O número mínimo de caracteres que a senha deve conter.
-- ucredit=-1 ➤ Deve conter pelo menos uma letra maiúscula. Colocamos o - como deve conter pelo menos um caracter, se colocarmos + queremos dizer no máximo esses caracteres.
-- dcredit=-1 ➤ Deve conter pelo menos um dígito.
-- lcredit=-1 ➤ Deve conter pelo menos uma letra minúscula.
-- maxrepeat=3 ➤ Não se pode ter o mesmo carácter mais de 3 vezes seguidas.
-- reject_username ➤ Não pode conter o nome do utilizador.
-- difok=7 ➤ Deve ter pelo menos 7 caracteres que não façam parte da senha antiga.
-- enforce_for_root ➤ Iremos implementar esta política para o utilizador de raiz.
+  > [!NOTE]
+  > Regras:
+  >
+  > 
+  >  minlen=10 ➤ O número mínimo de caracteres que a senha deve conter.
+  > 
+  > ucredit=-1 ➤ Deve conter pelo menos uma letra maiúscula. Colocamos o - como deve conter pelo menos um caracter, se colocarmos + queremos dizer no máximo esses caracteres.
+  > 
+  > dcredit=-1 ➤ Deve conter pelo menos um dígito.
+  > 
+  > lcredit=-1 ➤ Deve conter pelo menos uma letra minúscula.
+  > 
+  > maxrepeat=3 ➤ Não se pode ter o mesmo carácter mais de 3 vezes seguidas.
+  > 
+  > reject_username ➤ Não pode conter o nome do utilizador.
+  > 
+  > difok=7 ➤ Deve ter pelo menos 7 caracteres que não façam parte da senha antiga.
+  > 
+  > enforce_for_root ➤ Iremos implementar esta política para o utilizador de raiz.
 
 
 - [ ] criar um usuario novo, a senha seguindo as regras e um grupo evaluating, coloque o newuser nesse grupo
