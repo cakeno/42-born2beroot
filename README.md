@@ -1,4 +1,8 @@
-# 💾 Born2beRoot - Guia de Avaliação
+<h1 align="center">
+ 💾 Born2beRoot - Guia de Avaliação
+</h1>
+
+## 📖 Sobre o Projeto ![Score](https://img.shields.io/badge/score-100%2F100-brightgreen.svg)
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
 ## Table of Contents
