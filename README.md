@@ -11,7 +11,9 @@ sashum {name}.vdi
 ```
 > [!WARNING]
 > NÃO DÊ START NA VM ainda
+>
 > CLONE PRIMEIRO a VM para não alterar a assinatura da maquina e impossibilitar as próximas avaliações
+>
 > Realize a avaliação no CLONE.
 
 ### Passo extra: Acesso pelo ssh para copiar/colar comandos no terminal
