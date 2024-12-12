@@ -1,10 +1,8 @@
 # 💾 Born2beRoot - Guia de Avaliação
 Guia passo a passo para a avaliação do projeto Born2beRoot.
 
-<details>
-  <summary>Table of Contents</summary>
- - [Checklist de Avaliação](#-checklist)
-</details>
+## Table of Contents
+ - [Checklist de Avaliação](#-checklist-de-avaliação)
 
 ## 📋 Checklist de Avaliação
 - [ ] a root deve conter apenas o signature.txt
@@ -28,15 +26,14 @@ sashum {name}.vdi
    - com a VM desligada, mudar para modo "bridge" em configurações > network ou rede
    - startar o CLONE da VM
    - no terminal da VM para saber o IP que sera usado no comando de ssh. OBS > utilize o -I (maiúsculo) e não o minúsculo, os resultados sao IPs diferentes.
-```
-hostname -I
-```
-
-- no terminal local
-```
-ssh {user}@{IPhostname} -p 4242
-```
   </p>
+  ```
+  hostname -I
+  ```
+  - no terminal local
+  ```
+  ssh {user}@{IPhostname} -p 4242
+  ```
 </details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
