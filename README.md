@@ -337,7 +337,7 @@ sudo crontab -u root -e
 
 - [ ] inicializar o cron novamente
 ```
-sudo /etc/init.d/cron start
+sudo systemctl enable cron
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
